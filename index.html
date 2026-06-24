@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhijeet Pathak — Senior Security Consultant</title>
-    <meta name="description" content="Security Professional with 5+ years of expertise in Penetration Testing across Web, Network, GenAI, Mobile, and APIs.">
+    <meta name="description"
+        content="Security Professional with 5+ years of expertise in Penetration Testing across Web, Network, GenAI, Mobile, and APIs.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         :root {
             --bg: #040408;
@@ -30,7 +40,10 @@
             --mono: 'JetBrains Mono', 'Fira Code', monospace;
         }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: var(--font);
             background: var(--bg);
@@ -42,70 +55,129 @@
 
         /* ── cursor ── */
         .cursor-glow {
-            position: fixed; width: 450px; height: 450px;
-            border-radius: 50%; pointer-events: none; z-index: 9998;
+            position: fixed;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
             background: radial-gradient(circle, rgba(0, 255, 159, 0.04) 0%, transparent 70%);
             transform: translate(-50%, -50%);
             transition: opacity 0.3s;
             will-change: transform;
         }
+
         .cursor-dot {
-            position: fixed; width: 8px; height: 8px;
-            border-radius: 50%; pointer-events: none; z-index: 9999;
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
             background: var(--accent);
             transform: translate(-50%, -50%);
             transition: width 0.15s ease-out, height 0.15s ease-out, background-color 0.15s ease-out;
             will-change: transform;
             mix-blend-mode: difference;
         }
+
         .cursor-dot.hovering {
-            width: 28px; height: 28px; background: var(--accent2);
+            width: 28px;
+            height: 28px;
+            background: var(--accent2);
             mix-blend-mode: normal;
             border: 2px solid rgba(0, 229, 255, 0.5);
             box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
         }
 
         @media (max-width: 992px) {
-            .cursor-glow, .cursor-dot { display: none; }
-            body { cursor: auto; }
+
+            .cursor-glow,
+            .cursor-dot {
+                display: none;
+            }
+
+            body {
+                cursor: auto;
+            }
         }
 
         /* ── animated bg mesh ── */
         .bg-mesh {
-            position: fixed; inset: 0; z-index: 0; pointer-events: none;
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
             overflow: hidden;
         }
+
         .bg-mesh .blob {
-            position: absolute; border-radius: 50%; filter: blur(90px);
-            opacity: 0.25; animation: blobFloat 22s ease-in-out infinite;
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.25;
+            animation: blobFloat 22s ease-in-out infinite;
             will-change: transform;
         }
+
         .bg-mesh .blob:nth-child(1) {
-            width: 600px; height: 600px; top: -200px; left: -200px;
+            width: 600px;
+            height: 600px;
+            top: -200px;
+            left: -200px;
             background: radial-gradient(circle, rgba(0, 255, 159, 0.12), transparent);
-            animation-delay: 0s; animation-duration: 25s;
+            animation-delay: 0s;
+            animation-duration: 25s;
         }
+
         .bg-mesh .blob:nth-child(2) {
-            width: 500px; height: 500px; bottom: -150px; right: -150px;
+            width: 500px;
+            height: 500px;
+            bottom: -150px;
+            right: -150px;
             background: radial-gradient(circle, rgba(0, 229, 255, 0.1), transparent);
-            animation-delay: -7s; animation-duration: 22s;
+            animation-delay: -7s;
+            animation-duration: 22s;
         }
+
         .bg-mesh .blob:nth-child(3) {
-            width: 400px; height: 400px; top: 50%; left: 50%;
+            width: 400px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
             background: radial-gradient(circle, rgba(191, 85, 236, 0.06), transparent);
-            animation-delay: -14s; animation-duration: 28s;
+            animation-delay: -14s;
+            animation-duration: 28s;
         }
+
         @keyframes blobFloat {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(80px, -60px) scale(1.08); }
-            50% { transform: translate(-50px, 50px) scale(0.92); }
-            75% { transform: translate(60px, 30px) scale(1.04); }
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            25% {
+                transform: translate(80px, -60px) scale(1.08);
+            }
+
+            50% {
+                transform: translate(-50px, 50px) scale(0.92);
+            }
+
+            75% {
+                transform: translate(60px, 30px) scale(1.04);
+            }
         }
 
         /* ── noise overlay ── */
         .noise {
-            position: fixed; inset: 0; z-index: 1; pointer-events: none;
-            opacity: 0.022; mix-blend-mode: overlay;
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.022;
+            mix-blend-mode: overlay;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
             background-repeat: repeat;
             background-size: 256px 256px;
@@ -113,7 +185,10 @@
 
         /* ── grid overlay ── */
         .bg-grid {
-            position: fixed; inset: 0; z-index: 0; pointer-events: none;
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
             background-image:
                 linear-gradient(var(--border) 1px, transparent 1px),
                 linear-gradient(90deg, var(--border) 1px, transparent 1px);
@@ -122,20 +197,35 @@
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* ── layout ── */
         .container {
-            max-width: 1040px; margin: 0 auto; padding: 0 24px;
-            position: relative; z-index: 2;
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
         }
 
         /* ── nav ── */
         nav {
-            position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
-            z-index: 100; width: calc(100% - 48px); max-width: 1040px;
+            position: fixed;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            width: calc(100% - 48px);
+            max-width: 1040px;
             padding: 12px 24px;
             border-radius: 16px;
             background: rgba(4, 4, 8, 0.4);
@@ -143,114 +233,210 @@
             border: 1px solid var(--border);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         nav.scrolled {
             background: rgba(4, 4, 8, 0.75);
             border-color: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
             top: 8px;
         }
-        nav .container { display: flex; align-items: center; justify-content: space-between; padding: 0; }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+        }
+
         .nav-logo {
-            font-weight: 800; font-size: 1.2rem; letter-spacing: -0.03em;
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: -0.03em;
             background: linear-gradient(135deg, var(--accent), var(--accent2));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .nav-links { display: flex; gap: 4px; list-style: none; }
-        .nav-links a {
-            color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500;
-            padding: 6px 14px; border-radius: 8px; transition: all 0.2s;
+
+        .nav-links {
+            display: flex;
+            gap: 4px;
+            list-style: none;
         }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
         .nav-links a:hover {
-            color: var(--text); background: rgba(255,255,255,0.05);
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         /* ── hero ── */
         .hero {
-            min-height: 100vh; display: flex; align-items: center;
-            padding: 140px 0 80px; position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 0 80px;
+            position: relative;
         }
+
         .hero .container {
             display: grid;
             grid-template-columns: 1.25fr 0.95fr;
             gap: 64px;
             align-items: center;
         }
-        .hero-content { max-width: 100%; }
+
+        .hero-content {
+            max-width: 100%;
+        }
+
         .hero-badge {
-            display: inline-flex; align-items: center; gap: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             background: var(--accent-dim);
-            color: var(--accent); padding: 6px 16px;
-            border-radius: 100px; font-size: 0.8rem; font-weight: 500;
-            border: 1px solid rgba(0,255,159,0.15); margin-bottom: 28px;
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(0, 255, 159, 0.15);
+            margin-bottom: 28px;
             animation: fadeInUp 0.6s ease both;
         }
+
         .hero-badge .pulse {
-            width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
             animation: pulse 2s ease infinite;
         }
+
         @keyframes pulse {
-            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(0,255,159,0.4); }
-            50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(0,255,159,0); }
+
+            0%,
+            100% {
+                opacity: 1;
+                box-shadow: 0 0 0 0 rgba(0, 255, 159, 0.4);
+            }
+
+            50% {
+                opacity: 0.8;
+                box-shadow: 0 0 0 6px rgba(0, 255, 159, 0);
+            }
         }
+
         .hero h1 {
-            font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 800;
-            letter-spacing: -0.04em; line-height: 1.05;
+            font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
             margin-bottom: 20px;
             animation: fadeInUp 0.6s ease 0.1s both;
         }
+
         .hero h1 .gradient-text {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 50%, var(--purple) 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .hero p {
-            font-size: 1.1rem; color: var(--text-muted); max-width: 600px;
-            line-height: 1.7; margin-bottom: 36px;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: 36px;
             animation: fadeInUp 0.6s ease 0.2s both;
         }
+
         .hero-actions {
-            display: flex; gap: 12px; flex-wrap: wrap;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
             animation: fadeInUp 0.6s ease 0.3s both;
         }
+
         .btn {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 12px 28px; border-radius: 12px; font-size: 0.95rem; font-weight: 600;
-            text-decoration: none; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            cursor: none; position: relative; overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: none;
+            position: relative;
+            overflow: hidden;
         }
+
         .btn-primary {
             background: linear-gradient(135deg, var(--accent), #00d48a);
-            color: #040408; border: none;
-            box-shadow: 0 4px 20px rgba(0,255,159,0.2);
+            color: #040408;
+            border: none;
+            box-shadow: 0 4px 20px rgba(0, 255, 159, 0.2);
         }
+
         .btn-primary:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(0,255,159,0.35);
+            box-shadow: 0 12px 40px rgba(0, 255, 159, 0.35);
         }
-        .btn-primary:active { transform: translateY(-1px) scale(0.98); }
+
+        .btn-primary:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
         .btn-outline {
-            background: rgba(255,255,255,0.03);
-            color: var(--text); border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text);
+            border: 1px solid var(--border);
             backdrop-filter: blur(10px);
         }
+
         .btn-outline:hover {
-            border-color: var(--accent); color: var(--accent);
-            background: var(--accent-dim); transform: translateY(-3px);
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-dim);
+            transform: translateY(-3px);
         }
 
         .hero-stats {
-            display: flex; gap: 48px; margin-top: 52px; padding-top: 36px;
+            display: flex;
+            gap: 48px;
+            margin-top: 52px;
+            padding-top: 36px;
             border-top: 1px solid var(--border);
             animation: fadeInUp 0.6s ease 0.4s both;
         }
+
         .hero-stat h3 {
-            font-size: 2rem; font-weight: 800; letter-spacing: -0.03em;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
             background: linear-gradient(135deg, var(--accent), var(--accent2));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .hero-stat p { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
+
+        .hero-stat p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
 
         /* ── terminal widget ── */
         .hero-terminal {
@@ -271,10 +457,12 @@
             transition: all 0.3s ease;
             animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
         }
+
         .hero-terminal:hover {
             border-color: rgba(0, 255, 159, 0.25);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 255, 159, 0.08);
         }
+
         .terminal-header {
             background: rgba(18, 18, 30, 0.8);
             padding: 10px 16px;
@@ -283,19 +471,31 @@
             border-bottom: 1px solid var(--border);
             position: relative;
         }
+
         .terminal-buttons {
             display: flex;
             gap: 6px;
         }
+
         .terminal-buttons span {
             width: 10px;
             height: 10px;
             border-radius: 50%;
             display: inline-block;
         }
-        .btn-red { background: #ff5f56; }
-        .btn-yellow { background: #ffbd2e; }
-        .btn-green { background: #27c93f; }
+
+        .btn-red {
+            background: #ff5f56;
+        }
+
+        .btn-yellow {
+            background: #ffbd2e;
+        }
+
+        .btn-green {
+            background: #27c93f;
+        }
+
         .terminal-title {
             position: absolute;
             left: 50%;
@@ -304,6 +504,7 @@
             font-size: 0.72rem;
             font-weight: 500;
         }
+
         .terminal-body {
             padding: 16px;
             flex-grow: 1;
@@ -313,25 +514,54 @@
             flex-direction: column;
             gap: 8px;
         }
-        .terminal-user { color: var(--accent); }
-        .terminal-dir { color: var(--accent2); }
+
+        .terminal-user {
+            color: var(--accent);
+        }
+
+        .terminal-dir {
+            color: var(--accent2);
+        }
+
         .cursor-blink {
             animation: blink 1s step-end infinite;
             color: var(--accent);
             font-weight: 700;
         }
+
         @keyframes blink {
-            from, to { opacity: 1; }
-            50% { opacity: 0; }
+
+            from,
+            to {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
         }
+
         .terminal-line {
             line-height: 1.5;
             word-break: break-all;
         }
-        .terminal-success { color: var(--accent); }
-        .terminal-info { color: var(--accent2); }
-        .terminal-warning { color: var(--orange); }
-        .terminal-error { color: var(--red); }
+
+        .terminal-success {
+            color: var(--accent);
+        }
+
+        .terminal-info {
+            color: var(--accent2);
+        }
+
+        .terminal-warning {
+            color: var(--orange);
+        }
+
+        .terminal-error {
+            color: var(--red);
+        }
+
         .terminal-input-line {
             display: flex;
             align-items: center;
@@ -340,43 +570,67 @@
             padding-top: 8px;
             border-top: 1px solid rgba(255, 255, 255, 0.03);
         }
+
         .terminal-body::-webkit-scrollbar {
             width: 6px;
         }
+
         .terminal-body::-webkit-scrollbar-track {
             background: transparent;
         }
+
         .terminal-body::-webkit-scrollbar-thumb {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 3px;
         }
+
         .terminal-body::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.2);
         }
 
         /* ── sections ── */
-        section { padding: 80px 0; }
+        section {
+            padding: 80px 0;
+        }
+
         .section-label {
-            display: inline-flex; align-items: center; gap: 8px;
-            font-size: 0.75rem; font-weight: 600;
-            letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
             margin-bottom: 12px;
         }
+
         .section-label::before {
-            content: ''; width: 24px; height: 1.5px; background: var(--accent);
+            content: '';
+            width: 24px;
+            height: 1.5px;
+            background: var(--accent);
         }
+
         .section-label.centered {
             justify-content: center;
             margin: 0 auto 12px;
             display: flex;
             width: max-content;
         }
+
         .section-label.centered::after {
-            content: ''; width: 24px; height: 1.5px; background: var(--accent);
+            content: '';
+            width: 24px;
+            height: 1.5px;
+            background: var(--accent);
         }
+
         .section-title {
-            font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 700;
-            letter-spacing: -0.03em; margin-bottom: 48px;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 48px;
             line-height: 1.2;
         }
 
@@ -387,6 +641,7 @@
             gap: 16px;
             margin-bottom: 56px;
         }
+
         .featured-skill {
             position: relative;
             background: var(--surface);
@@ -399,112 +654,237 @@
             backdrop-filter: blur(12px);
             cursor: none;
         }
+
         .featured-skill::before {
             content: '';
-            position: absolute; inset: 0;
+            position: absolute;
+            inset: 0;
             border-radius: 16px;
-            opacity: 0; transition: opacity 0.4s;
+            opacity: 0;
+            transition: opacity 0.4s;
             background: linear-gradient(135deg, var(--accent-dim), transparent 60%);
         }
+
         .featured-skill:hover {
             border-color: var(--border-hover);
             transform: translateY(-6px) scale(1.02);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
         }
-        .featured-skill:hover::before { opacity: 1; }
-        .featured-skill:active { transform: translateY(-2px) scale(0.98); }
+
+        .featured-skill:hover::before {
+            opacity: 1;
+        }
+
+        .featured-skill:active {
+            transform: translateY(-2px) scale(0.98);
+        }
 
         .featured-skill .icon-wrap {
-            width: 52px; height: 52px; margin: 0 auto 16px;
-            border-radius: 14px; display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem; position: relative; transition: transform 0.3s;
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 16px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            position: relative;
+            transition: transform 0.3s;
         }
-        .featured-skill:hover .icon-wrap { transform: scale(1.1) rotate(-5deg); }
-        .featured-skill .icon-wrap.green { background: rgba(0,255,159,0.12); }
-        .featured-skill .icon-wrap.blue { background: rgba(0,229,255,0.12); }
-        .featured-skill .icon-wrap.purple { background: rgba(191,85,236,0.12); }
-        .featured-skill .icon-wrap.orange { background: rgba(249,115,22,0.12); }
+
+        .featured-skill:hover .icon-wrap {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .featured-skill .icon-wrap.green {
+            background: rgba(0, 255, 159, 0.12);
+        }
+
+        .featured-skill .icon-wrap.blue {
+            background: rgba(0, 229, 255, 0.12);
+        }
+
+        .featured-skill .icon-wrap.purple {
+            background: rgba(191, 85, 236, 0.12);
+        }
+
+        .featured-skill .icon-wrap.orange {
+            background: rgba(249, 115, 22, 0.12);
+        }
 
         .featured-skill h3 {
-            font-size: 1rem; font-weight: 700; margin-bottom: 8px;
-            position: relative; z-index: 1;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
         }
+
         .featured-skill p {
-            font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;
-            position: relative; z-index: 1;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
         }
+
         .featured-skill .skill-level {
-            margin-top: 14px; height: 3px; border-radius: 4px;
-            background: rgba(255,255,255,0.06); overflow: hidden;
-            position: relative; z-index: 1;
+            margin-top: 14px;
+            height: 3px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.06);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
         }
+
         .featured-skill .skill-level .bar {
-            height: 100%; border-radius: 4px; width: 0%;
+            height: 100%;
+            border-radius: 4px;
+            width: 0%;
             transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .featured-skill .skill-bar-visible .bar {
             width: var(--level);
         }
-        .featured-skill .skill-level .bar.green { background: linear-gradient(90deg, var(--accent), #00d48a); }
-        .featured-skill .skill-level .bar.blue { background: linear-gradient(90deg, var(--accent2), #0099ff); }
-        .featured-skill .skill-level .bar.purple { background: linear-gradient(90deg, var(--purple), #d946ef); }
-        .featured-skill .skill-level .bar.orange { background: linear-gradient(90deg, var(--orange), #fbbf24); }
+
+        .featured-skill .skill-level .bar.green {
+            background: linear-gradient(90deg, var(--accent), #00d48a);
+        }
+
+        .featured-skill .skill-level .bar.blue {
+            background: linear-gradient(90deg, var(--accent2), #0099ff);
+        }
+
+        .featured-skill .skill-level .bar.purple {
+            background: linear-gradient(90deg, var(--purple), #d946ef);
+        }
+
+        .featured-skill .skill-level .bar.orange {
+            background: linear-gradient(90deg, var(--orange), #fbbf24);
+        }
 
         /* ── skills grid ── */
         .skills-grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 10px;
         }
+
         .skill-tag {
-            display: flex; align-items: center; gap: 8px;
-            background: var(--surface); border: 1px solid var(--border);
-            padding: 10px 16px; border-radius: 10px; font-size: 0.88rem; font-weight: 500;
-            transition: all 0.3s; backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            backdrop-filter: blur(8px);
             cursor: none;
         }
+
         .skill-tag:hover {
-            border-color: var(--accent); background: var(--accent-dim);
+            border-color: var(--accent);
+            background: var(--accent-dim);
             transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 4px 20px rgba(0,255,159,0.1);
+            box-shadow: 0 4px 20px rgba(0, 255, 159, 0.1);
         }
+
         .skill-tag .dot {
-            width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            flex-shrink: 0;
         }
 
         /* ── experience ── */
-        .timeline { position: relative; padding-left: 32px; }
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+        }
+
         .timeline::before {
-            content: ''; position: absolute; left: 16px; top: 8px; bottom: 8px;
-            width: 2px; transform: translateX(-50%);
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            transform: translateX(-50%);
             background: linear-gradient(to bottom, var(--accent), var(--accent2), transparent);
         }
+
         .timeline-item {
-            position: relative; padding-bottom: 48px;
+            position: relative;
+            padding-bottom: 48px;
         }
-        .timeline-item:last-child { padding-bottom: 0; }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
         .timeline-dot {
-            position: absolute; left: -16px; top: 6px;
-            width: 14px; height: 14px; border-radius: 50%;
+            position: absolute;
+            left: -16px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
             transform: translateX(-50%);
-            background: var(--bg); border: 2px solid var(--accent);
+            background: var(--bg);
+            border: 2px solid var(--accent);
             box-shadow: 0 0 12px rgba(0, 255, 159, 0.3);
             z-index: 2;
         }
+
         .timeline-date {
-            display: inline-block; font-size: 0.8rem; font-family: var(--mono);
-            color: var(--accent); margin-bottom: 6px;
+            display: inline-block;
+            font-size: 0.8rem;
+            font-family: var(--mono);
+            color: var(--accent);
+            margin-bottom: 6px;
         }
+
         .timeline-company {
-            font-size: 1.3rem; font-weight: 700; margin-bottom: 2px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 2px;
         }
-        .timeline-company span { color: var(--text-muted); font-weight: 400; }
-        .timeline-desc { color: var(--text-muted); font-size: 0.95rem; margin-top: 10px; }
-        .timeline-desc ul { list-style: none; padding: 0; margin-top: 10px; }
+
+        .timeline-company span {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .timeline-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 10px;
+        }
+
+        .timeline-desc ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
         .timeline-desc li {
-            position: relative; padding-left: 20px; margin-bottom: 6px; font-size: 0.9rem;
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
         }
+
         .timeline-desc li::before {
-            content: '→'; position: absolute; left: 0; color: var(--accent);
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
         }
 
         /* ── projects ── */
@@ -513,6 +893,7 @@
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
+
         .project-card {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -527,30 +908,45 @@
             cursor: none;
             overflow: hidden;
         }
+
         .project-card::before {
             content: '';
-            position: absolute; inset: 0;
+            position: absolute;
+            inset: 0;
             border-radius: 16px;
-            opacity: 0; transition: opacity 0.4s;
+            opacity: 0;
+            transition: opacity 0.4s;
             background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 255, 159, 0.08), transparent 40%);
             z-index: 0;
             pointer-events: none;
         }
+
         .project-card::after {
             content: '';
             position: absolute;
             inset: 0 0 -15px 0;
             z-index: -1;
         }
+
         .project-card:hover {
             border-color: rgba(0, 255, 159, 0.2);
             transform: translateY(-6px) scale(1.02);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 30px rgba(0, 255, 159, 0.03);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 255, 159, 0.03);
             background: var(--surface-hover);
         }
-        .project-card:hover::before { opacity: 1; }
-        .project-card:active { transform: translateY(-2px) scale(0.98); }
-        .project-card > * { position: relative; z-index: 1; }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-card:active {
+            transform: translateY(-2px) scale(0.98);
+        }
+
+        .project-card>* {
+            position: relative;
+            z-index: 1;
+        }
 
         .project-meta {
             display: flex;
@@ -558,6 +954,7 @@
             justify-content: space-between;
             margin-bottom: 4px;
         }
+
         .project-icon {
             font-size: 1.6rem;
             width: 44px;
@@ -570,16 +967,19 @@
             border: 1px solid var(--border);
             transition: all 0.3s;
         }
+
         .project-card:hover .project-icon {
             background: var(--accent-dim);
             border-color: rgba(0, 255, 159, 0.25);
             transform: scale(1.1) rotate(-5deg);
         }
+
         .project-card h3 {
             font-size: 1.15rem;
             font-weight: 700;
             letter-spacing: -0.02em;
         }
+
         .project-card h3 a {
             color: var(--text);
             text-decoration: none;
@@ -588,9 +988,11 @@
             align-items: center;
             gap: 4px;
         }
+
         .project-card h3 a:hover {
             color: var(--accent);
         }
+
         .project-card p {
             color: var(--text-muted);
             font-size: 0.9rem;
@@ -598,6 +1000,7 @@
             margin: 0;
             flex-grow: 1;
         }
+
         .project-tags {
             display: flex;
             flex-wrap: wrap;
@@ -605,6 +1008,7 @@
             margin-top: auto;
             padding-top: 8px;
         }
+
         .tech-tag {
             font-size: 0.72rem;
             font-family: var(--mono);
@@ -615,6 +1019,7 @@
             border-radius: 6px;
             font-weight: 500;
         }
+
         .project-card:hover .tech-tag {
             border-color: rgba(0, 229, 255, 0.25);
         }
@@ -625,81 +1030,159 @@
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
+
         .achievement-card {
             display: flex;
             flex-direction: column;
             gap: 16px;
-            background: var(--surface); border: 1px solid var(--border);
-            border-radius: 16px; padding: 28px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             backdrop-filter: blur(12px);
             cursor: none;
             position: relative;
             overflow: hidden;
         }
+
         .achievement-card::before {
             content: '';
-            position: absolute; inset: 0;
+            position: absolute;
+            inset: 0;
             border-radius: 16px;
-            opacity: 0; transition: opacity 0.4s;
+            opacity: 0;
+            transition: opacity 0.4s;
             background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(191, 85, 236, 0.08), transparent 40%);
             z-index: 0;
             pointer-events: none;
         }
+
         .achievement-card::after {
             content: '';
             position: absolute;
             inset: 0 0 -15px 0;
             z-index: -1;
         }
+
         .achievement-card:hover {
             border-color: rgba(191, 85, 236, 0.2);
             background: var(--surface-hover);
             transform: translateY(-6px) scale(1.02);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 30px rgba(191, 85, 236, 0.03);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(191, 85, 236, 0.03);
         }
-        .achievement-card:hover::before { opacity: 1; }
-        .achievement-card > * { position: relative; z-index: 1; }
+
+        .achievement-card:hover::before {
+            opacity: 1;
+        }
+
+        .achievement-card>* {
+            position: relative;
+            z-index: 1;
+        }
 
         .achievement-icon {
-            font-size: 1.5rem; flex-shrink: 0; width: 48px; height: 48px;
-            display: flex; align-items: center; justify-content: center;
-            background: rgba(255, 255, 255, 0.03); border-radius: 12px;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
             border: 1px solid var(--border);
             transition: all 0.3s;
         }
+
         .achievement-card:hover .achievement-icon {
             background: rgba(191, 85, 236, 0.12);
             border-color: rgba(191, 85, 236, 0.25);
             transform: scale(1.1) rotate(5deg);
         }
-        .achievement-card h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; }
-        .achievement-card h3 a { color: var(--text); text-decoration: none; transition: color 0.2s; }
-        .achievement-card h3 a:hover { color: var(--purple); }
-        .achievement-card p { color: var(--text-muted); font-size: 0.9rem; margin-top: 6px; line-height: 1.6; }
+
+        .achievement-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .achievement-card h3 a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .achievement-card h3 a:hover {
+            color: var(--purple);
+        }
+
+        .achievement-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 6px;
+            line-height: 1.6;
+        }
 
         /* ── contact ── */
         .contact-block {
-            background: var(--surface); border: 1px solid var(--border);
-            border-radius: 16px; padding: 40px; text-align: center;
-            max-width: 540px; margin: 0 auto; backdrop-filter: blur(12px);
-            position: relative; overflow: hidden;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            max-width: 540px;
+            margin: 0 auto;
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
         }
+
         .contact-block::before {
             content: '';
-            position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
             background: conic-gradient(from 0deg, transparent, var(--accent-dim), transparent, var(--accent2-dim), transparent);
             animation: rotateBorder 6s linear infinite;
             opacity: 0.3;
         }
+
         @keyframes rotateBorder {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
-        .contact-block > * { position: relative; z-index: 1; }
-        .contact-block .contact-icon { font-size: 2.5rem; margin-bottom: 16px; }
-        .contact-block h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 8px; }
-        .contact-block p { color: var(--text-muted); margin-bottom: 20px; }
-        .contact-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+        .contact-block>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-block .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .contact-block h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .contact-block p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
 
         .hero-socials {
             display: flex;
@@ -707,6 +1190,7 @@
             margin-top: 24px;
             animation: fadeInUp 0.6s ease 0.35s both;
         }
+
         .contact-socials {
             display: flex;
             justify-content: center;
@@ -715,7 +1199,9 @@
             border-top: 1px solid var(--border);
             padding-top: 24px;
         }
-        .hero-socials a, .contact-socials a {
+
+        .hero-socials a,
+        .contact-socials a {
             color: var(--text-muted);
             font-size: 0.9rem;
             text-decoration: none;
@@ -726,42 +1212,76 @@
             transition: all 0.2s ease;
             cursor: none;
         }
-        .hero-socials a:hover, .contact-socials a:hover {
+
+        .hero-socials a:hover,
+        .contact-socials a:hover {
             color: var(--accent);
             transform: translateY(-2px);
         }
 
         /* ── footer ── */
         footer {
-            text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 0.85rem;
-            border-top: 1px solid var(--border); margin-top: 40px;
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
         }
 
         /* ── reveal ── */
         .reveal {
-            opacity: 0; transform: translateY(30px);
+            opacity: 0;
+            transform: translateY(30px);
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* ── mobile ── */
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-        .hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 22px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
 
         @media (max-width: 992px) {
             .hero .container {
                 grid-template-columns: 1fr;
                 gap: 48px;
             }
+
             .hero-terminal {
                 max-width: 520px;
                 margin: 0 auto;
             }
-            .featured-skills { grid-template-columns: repeat(2, 1fr); }
-            nav {
-                top: 8px; width: calc(100% - 24px);
-                padding: 10px 16px; border-radius: 12px;
+
+            .featured-skills {
+                grid-template-columns: repeat(2, 1fr);
             }
+
+            nav {
+                top: 8px;
+                width: calc(100% - 24px);
+                padding: 10px 16px;
+                border-radius: 12px;
+            }
+
             .nav-links {
                 display: flex;
                 flex-direction: column;
@@ -783,35 +1303,77 @@
                 transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
                 box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
             }
+
             .nav-links.open {
                 opacity: 1;
                 transform: translateY(0);
                 pointer-events: auto;
             }
-            .hamburger { display: flex; }
-            .hero-stats { flex-wrap: wrap; gap: 24px; }
-            .hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
-            section { padding: 80px 0; }
-            .skills-grid { grid-template-columns: repeat(2, 1fr); }
-            .btn { cursor: pointer; }
-            .featured-skill { cursor: pointer; }
-            .skill-tag, .project-card, .achievement-card, .contact-block { cursor: pointer; }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 24px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2rem, 8vw, 2.8rem);
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .btn {
+                cursor: pointer;
+            }
+
+            .featured-skill {
+                cursor: pointer;
+            }
+
+            .skill-tag,
+            .project-card,
+            .achievement-card,
+            .contact-block {
+                cursor: pointer;
+            }
         }
 
         @media (max-width: 576px) {
-            .featured-skills { grid-template-columns: 1fr; }
-            .skills-grid { grid-template-columns: 1fr; }
-            .hero-stats { justify-content: space-between; }
+            .featured-skills {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                justify-content: space-between;
+            }
         }
+
         @media (max-width: 480px) {
-            .featured-skills { grid-template-columns: 1fr; }
+            .featured-skills {
+                grid-template-columns: 1fr;
+            }
         }
+
         /* ── Lucide Icon Sizing Overrides ── */
         .icon-wrap svg {
             width: 24px;
             height: 24px;
             stroke-width: 2;
         }
+
         .project-icon svg {
             width: 20px;
             height: 20px;
@@ -819,9 +1381,11 @@
             color: var(--accent2);
             transition: color 0.3s;
         }
+
         .project-card:hover .project-icon svg {
             color: var(--accent);
         }
+
         .achievement-icon svg {
             width: 22px;
             height: 22px;
@@ -829,615 +1393,774 @@
             color: var(--purple);
             transition: color 0.3s;
         }
+
         .achievement-card:hover .achievement-icon svg {
             color: var(--accent);
         }
+
         .contact-icon svg {
             width: 40px;
             height: 40px;
             stroke-width: 1.5;
             color: var(--accent);
         }
-        .hero-socials svg, .contact-socials svg {
+
+        .hero-socials svg,
+        .contact-socials svg {
             width: 16px;
             height: 16px;
             stroke-width: 2;
         }
     </style>
 </head>
+
 <body>
 
-<div class="cursor-glow" id="cursorGlow"></div>
-<div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
 
-<div class="bg-mesh">
-    <div class="blob"></div>
-    <div class="blob"></div>
-    <div class="blob"></div>
-</div>
-<div class="bg-grid"></div>
-<div class="noise"></div>
-
-
-
-<!-- nav -->
-<nav id="nav">
-    <div class="container">
-        <div class="nav-logo">AP</div>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <div class="bg-mesh">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
     </div>
-</nav>
+    <div class="bg-grid"></div>
+    <div class="noise"></div>
 
-<!-- hero -->
-<section class="hero" id="about">
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-badge"><span class="pulse"></span> Available for opportunities</div>
-            <h1>Hi, I'm <span class="gradient-text">Abhijeet Pathak</span></h1>
-            <p>
-                Security Professional with 5+ years of expertise in advanced Penetration Testing across
-                Web, Network, GenAI, Mobile, and APIs — with a proven specialization in infrastructure
-                and emerging technologies.
-            </p>
-            <div class="hero-actions">
-                <a href="#experience" class="btn btn-primary">View Experience ↓</a>
-                <a href="resume.pdf" class="btn btn-outline" target="_blank">Download Resume ↗</a>
-            </div>
-            <div class="hero-socials">
-                <a href="http://github.com/neverjunior/" target="_blank" title="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/abhijeet-pathakk/" target="_blank" title="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    LinkedIn
-                </a>
-                <a href="https://x.com/neverjuniorr" target="_blank" title="Twitter">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.016zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg>
-                    Twitter
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="hero-stat"><h3><span class="count-up" data-target="5">0</span>+</h3><p>Years Experience</p></div>
-                <div class="hero-stat"><h3><span class="count-up" data-target="50">0</span>+</h3><p>Hall of Fame Awards</p></div>
-                <div class="hero-stat"><h3><span class="count-up" data-target="1">0</span></h3><p>CVE Published</p></div>
-            </div>
+
+
+    <!-- nav -->
+    <nav id="nav">
+        <div class="container">
+            <div class="nav-logo">AP</div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <div class="hero-terminal reveal">
-            <div class="terminal-header">
-                <div class="terminal-buttons">
-                    <span class="btn-red"></span>
-                    <span class="btn-yellow"></span>
-                    <span class="btn-green"></span>
+    <!-- hero -->
+    <section class="hero" id="about">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge"><span class="pulse"></span> Available for opportunities</div>
+                <h1>Hi, I'm <span class="gradient-text">Abhijeet Pathak</span></h1>
+                <p>
+                    Security Professional with 5+ years of expertise in advanced Penetration Testing across
+                    Web, Network, GenAI, Mobile, and APIs — with a proven specialization in infrastructure
+                    and emerging technologies.
+                </p>
+                <div class="hero-actions">
+                    <a href="#experience" class="btn btn-primary">View Experience ↓</a>
+                    <a href="resume.pdf" class="btn btn-outline" target="_blank">Download Resume ↗</a>
                 </div>
-                <div class="terminal-title">bash - guest@abhijeet</div>
-            </div>
-            <div class="terminal-body" id="terminalBody">
-                <div class="terminal-line"><span class="terminal-user">guest@abhijeet</span>:<span class="terminal-dir">~</span>$ <span class="typed-text">./recon.sh</span></div>
-                <div class="terminal-output" id="terminalOutput"></div>
-                <div class="terminal-input-line">
-                    <span class="terminal-user">guest@abhijeet</span>:<span class="terminal-dir">~</span>$ <span id="commandInput" class="command-input"></span><span class="cursor-blink">_</span>
+                <div class="hero-socials">
+                    <a href="http://github.com/neverjunior/" target="_blank" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                            </path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhijeet-pathakk/" target="_blank" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://x.com/neverjuniorr" target="_blank" title="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.016zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                        Twitter
+                    </a>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- experience -->
-<section id="experience">
-    <div class="container">
-        <p class="section-label reveal">Career</p>
-        <h2 class="section-title reveal">Work Experience</h2>
-        <div class="timeline">
-
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <p class="timeline-date">Oct 2023 – Present</p>
-                <h3 class="timeline-company">Offensive Senior Security Consultant <span>— Kroll</span></h3>
-                <div class="timeline-desc">
-                    <ul>
-                        <li>Comprehensive penetration testing across web, mobile, and API platforms for banking, telecom, and cloud clients</li>
-                        <li>Active Directory penetration testing uncovering multiple domain compromise paths</li>
-                        <li>GenAI Penetration Testing for chatbots, downstream services, and vibe coding agents</li>
-                        <li>Developed automation scripts, Burp extensions (SQLi detector, JS analyzer), and AI-powered reporting for GAP product</li>
-                        <li>Led technical interview loops, trained new hires, and ran threat modeling initiatives</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <p class="timeline-date">Dec 2021 – Sep 2023</p>
-                <h3 class="timeline-company">Security Consultant <span>— RedHunt Labs</span></h3>
-                <div class="timeline-desc">
-                    <ul>
-                        <li>Penetration testing of web applications, APIs, and Android apps — finding RCE, SSRF with AWS metadata access bypassing firewall/whitelisting, SQLi bypassing Cloudflare & AWS WAF</li>
-                        <li>Attack Surface Management for global clients (200K+ assets/month) with automation</li>
-                        <li>Developed automation tools in Bash, Python, and Go for vulnerability discovery</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <p class="timeline-date">Jun 2021 – Dec 2021</p>
-                <h3 class="timeline-company">Associate Security Consultant <span>— SecurityBulls Intelligence</span></h3>
-                <div class="timeline-desc">
-                    <ul>
-                        <li>Performed DAST and source code review for web and mobile applications</li>
-                        <li>Discovered high-level vulnerabilities using BurpSuite, Nmap, SQLmap, Postman</li>
-                        <li>Developed Bash and Python scripts for task automation</li>
-                    </ul>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <h3><span class="count-up" data-target="5">0</span>+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3><span class="count-up" data-target="50">0</span>+</h3>
+                        <p>Hall of Fame Awards</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3><span class="count-up" data-target="1">0</span></h3>
+                        <p>CVE Published</p>
+                    </div>
                 </div>
             </div>
 
-        </div>
-    </div>
-</section>
-
-<!-- skills -->
-<section id="skills">
-    <div class="container">
-        <p class="section-label reveal">Expertise</p>
-        <h2 class="section-title reveal">Skills & Specialties</h2>
-
-        <!-- Featured skills: GenAI, Web, Mobile, Network -->
-        <div class="featured-skills">
-            <div class="featured-skill reveal" style="--level: 95%">
-                <div class="icon-wrap green">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path><path d="M12 5v14"></path><path d="M19 14h2"></path><path d="M3 14h2"></path><path d="M17 9h4"></path><path d="M3 9h4"></path></svg>
+            <div class="hero-terminal reveal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-red"></span>
+                        <span class="btn-yellow"></span>
+                        <span class="btn-green"></span>
+                    </div>
+                    <div class="terminal-title">bash - abhijeet@localhost</div>
                 </div>
-                <h3>GenAI Security</h3>
-                <p>LLM pentesting, prompt injection, model extraction, AI agent auditing</p>
-                <div class="skill-level"><div class="bar green"></div></div>
-            </div>
-            <div class="featured-skill reveal" style="--level: 98%">
-                <div class="icon-wrap blue">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-                </div>
-                <h3>Web Security</h3>
-                <p>Full-stack web app pentesting — XSS, SQLi, SSRF, RCE, WAF bypass</p>
-                <div class="skill-level"><div class="bar blue"></div></div>
-            </div>
-            <div class="featured-skill reveal" style="--level: 92%">
-                <div class="icon-wrap purple">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
-                </div>
-                <h3>Mobile Security</h3>
-                <p>Android & iOS app assessment, API reversing, runtime manipulation</p>
-                <div class="skill-level"><div class="bar purple"></div></div>
-            </div>
-            <div class="featured-skill reveal" style="--level: 96%">
-                <div class="icon-wrap orange">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg>
-                </div>
-                <h3>Network Security</h3>
-                <p>Internal & external network PT, AD review, cloud infra assessment</p>
-                <div class="skill-level"><div class="bar orange"></div></div>
-            </div>
-        </div>
-
-        <div class="skills-grid">
-            <div class="skill-tag reveal"><span class="dot"></span>Web Penetration Testing</div>
-            <div class="skill-tag reveal"><span class="dot"></span>API Penetration Testing</div>
-            <div class="skill-tag reveal"><span class="dot"></span>Mobile Penetration Testing</div>
-            <div class="skill-tag reveal"><span class="dot"></span>Internal Network PT</div>
-            <div class="skill-tag reveal"><span class="dot"></span>External Network PT</div>
-            <div class="skill-tag reveal"><span class="dot"></span>Active Directory Review</div>
-            <div class="skill-tag reveal"><span class="dot"></span>Cloud Security</div>
-            <div class="skill-tag reveal"><span class="dot"></span>GenAI Penetration Testing</div>
-            <div class="skill-tag reveal"><span class="dot"></span>AWS Configuration Review</div>
-            <div class="skill-tag reveal"><span class="dot"></span>Attack Surface Management</div>
-            <div class="skill-tag reveal"><span class="dot"></span>Python Scripting</div>
-            <div class="skill-tag reveal"><span class="dot"></span>Bash Scripting</div>
-            <div class="skill-tag reveal"><span class="dot"></span>OSINT</div>
-            <div class="skill-tag reveal"><span class="dot"></span>Active Directory PT</div>
-        </div>
-    </div>
-</section>
-
-<!-- projects -->
-<section id="projects">
-    <div class="container">
-        <p class="section-label reveal">Builds</p>
-        <h2 class="section-title reveal">Personal Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card reveal">
-                <div class="project-meta">
-                    <span class="project-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></span>
-                </div>
-                <h3><a href="https://github.com/neverjunior/GitSki" target="_blank">GitSki ↗</a></h3>
-                <p>Open-sourced GitHub Recon automation tool written in Python that bypasses GitHub restrictions for effective scanning.</p>
-                <div class="project-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">GitHub API</span>
-                    <span class="tech-tag">Recon</span>
-                    <span class="tech-tag">OSINT</span>
-                </div>
-            </div>
-            <div class="project-card reveal">
-                <div class="project-meta">
-                    <span class="project-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M9 1v3"></path><path d="M15 1v3"></path><path d="M9 20v3"></path><path d="M15 20v3"></path><path d="M20 9h3"></path><path d="M20 15h3"></path><path d="M1 9h3"></path><path d="M1 15h3"></path></svg>
-                    </span>
-                </div>
-                <h3>Subdomain Prediction Tool</h3>
-                <p>Fine-tuned an LLM model to create a subdomain prediction engine for reconnaissance.</p>
-                <div class="project-tags">
-                    <span class="tech-tag">LLM</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Machine Learning</span>
-                    <span class="tech-tag">Recon</span>
-                </div>
-            </div>
-            <div class="project-card reveal">
-                <div class="project-meta">
-                    <span class="project-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"></path><path d="M16 21h1a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"></path></svg>
-                    </span>
-                </div>
-                <h3>JavaScript Analysis Tool</h3>
-                <p>Real-time JS monitoring tool that finds secrets and endpoints leveraging AI and Abstract Syntax Tree parsing.</p>
-                <div class="project-tags">
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">AST Parsing</span>
-                    <span class="tech-tag">AI</span>
-                    <span class="tech-tag">Burp Suite</span>
-                </div>
-            </div>
-            <div class="project-card reveal">
-                <div class="project-meta">
-                    <span class="project-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                    </span>
-                </div>
-                <h3>Parshu</h3>
-                <p>Bash-based automation framework for bug hunting and recon — LFI, XSS, SQLi, SSRF, fuzzing, waybackurls, GitHub recon, Shodan, and more.</p>
-                <div class="project-tags">
-                    <span class="tech-tag">Bash</span>
-                    <span class="tech-tag">Recon</span>
-                    <span class="tech-tag">Bug Bounty</span>
-                    <span class="tech-tag">Automation</span>
-                </div>
-            </div>
-            <div class="project-card reveal">
-                <div class="project-meta">
-                    <span class="project-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-                    </span>
-                </div>
-                <h3>Source Code Analyzer</h3>
-                <p>Takes valid directories and webpages from waybackurls, fuzzes them, and finds secrets/endpoints using regex.</p>
-                <div class="project-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Regex</span>
-                    <span class="tech-tag">Static Analysis</span>
-                    <span class="tech-tag">Wayback</span>
-                </div>
-            </div>
-            <div class="project-card reveal">
-                <div class="project-meta">
-                    <span class="project-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-                    </span>
-                </div>
-                <h3>Subdomain Finding Framework</h3>
-                <p>Recursive subdomain discovery using custom modules and open-source tools via active and passive methods.</p>
-                <div class="project-tags">
-                    <span class="tech-tag">Bash</span>
-                    <span class="tech-tag">Automation</span>
-                    <span class="tech-tag">Active/Passive</span>
-                    <span class="tech-tag">OSINT</span>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="terminal-line"><span class="terminal-user">abhijeet@localhost</span>:<span
+                            class="terminal-dir">~</span>$ <span class="typed-text">./recon.sh</span></div>
+                    <div class="terminal-output" id="terminalOutput"></div>
+                    <div class="terminal-input-line">
+                        <span class="terminal-user">abhijeet@localhost</span>:<span class="terminal-dir">~</span>$ <span
+                            id="commandInput" class="command-input"></span><span class="cursor-blink">_</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- achievements -->
-<section id="achievements">
-    <div class="container">
-        <p class="section-label reveal">Recognition</p>
-        <h2 class="section-title reveal">Achievements & Certifications</h2>
-        <div class="achievement-grid">
-            <div class="achievement-card reveal">
-                <div class="achievement-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+    <!-- experience -->
+    <section id="experience">
+        <div class="container">
+            <p class="section-label reveal">Career</p>
+            <h2 class="section-title reveal">Work Experience</h2>
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <p class="timeline-date">Oct 2023 – Present</p>
+                    <h3 class="timeline-company">Offensive Senior Security Consultant <span>— Kroll</span></h3>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Comprehensive penetration testing across web, mobile, and API platforms for banking,
+                                telecom, and cloud clients</li>
+                            <li>Active Directory penetration testing uncovering multiple domain compromise paths</li>
+                            <li>GenAI Penetration Testing for chatbots, downstream services, and vibe coding agents</li>
+                            <li>Developed automation scripts, Burp extensions (SQLi detector, JS analyzer), and
+                                AI-powered reporting for GAP product</li>
+                            <li>Led technical interview loops, trained new hires, and ran threat modeling initiatives
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4314" target="_blank">CVE-2022-4314 ↗</a></h3>
-                <p>Personal CVE published in the National Vulnerability Database.</p>
-            </div>
-            <div class="achievement-card reveal">
-                <div class="achievement-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 9.7a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 .76-.97l8-2a1 1 0 0 1 .48 0l8 2A1 1 0 0 1 20 6v7z"></path><path d="m9 12 2 2 4-4"></path></svg>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <p class="timeline-date">Dec 2021 – Sep 2023</p>
+                    <h3 class="timeline-company">Security Consultant <span>— RedHunt Labs</span></h3>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Penetration testing of web applications, APIs, and Android apps — finding RCE, SSRF with
+                                AWS metadata access bypassing firewall/whitelisting, SQLi bypassing Cloudflare & AWS WAF
+                            </li>
+                            <li>Attack Surface Management for global clients (200K+ assets/month) with automation</li>
+                            <li>Developed automation tools in Bash, Python, and Go for vulnerability discovery</li>
+                        </ul>
+                    </div>
                 </div>
-                <h3>50+ Hall of Fame & Bug Bounties</h3>
-                <p>From Cloudflare, Dell, Twitter, Microsoft, Bitgo, Lacework, and many more.</p>
-            </div>
-            <div class="achievement-card reveal">
-                <div class="achievement-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M5 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path><path d="M7 16.5 8 22l-3-1-3 1 1-5.5"></path></svg>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <p class="timeline-date">Jun 2021 – Dec 2021</p>
+                    <h3 class="timeline-company">Associate Security Consultant <span>— SecurityBulls Intelligence</span>
+                    </h3>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Performed DAST and source code review for web and mobile applications</li>
+                            <li>Discovered high-level vulnerabilities using BurpSuite, Nmap, SQLmap, Postman</li>
+                            <li>Developed Bash and Python scripts for task automation</li>
+                        </ul>
+                    </div>
                 </div>
-                <h3>Practical Ethical Hacking — Heath Adams</h3>
-                <p>ICSI | CNSS Certified Network Security Specialist, Python for Pentesters (EC-Council),
-                Ethical Hacking (Zaid Zsecurity), Automate the Boring Stuff with Python (Udemy).</p>
+
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- contact -->
-<section id="contact">
-    <div class="container">
-        <p class="section-label reveal centered">Connect</p>
-        <h2 class="section-title reveal" style="text-align:center;">Get in Touch</h2>
-        <div class="contact-block reveal">
-            <div class="contact-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+    <!-- skills -->
+    <section id="skills">
+        <div class="container">
+            <p class="section-label reveal">Expertise</p>
+            <h2 class="section-title reveal">Skills & Specialties</h2>
+
+            <!-- Featured skills: GenAI, Web, Mobile, Network -->
+            <div class="featured-skills">
+                <div class="featured-skill reveal" style="--level: 95%">
+                    <div class="icon-wrap green">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z">
+                            </path>
+                            <path
+                                d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z">
+                            </path>
+                            <path d="M12 5v14"></path>
+                            <path d="M19 14h2"></path>
+                            <path d="M3 14h2"></path>
+                            <path d="M17 9h4"></path>
+                            <path d="M3 9h4"></path>
+                        </svg>
+                    </div>
+                    <h3>GenAI Security</h3>
+                    <p>LLM pentesting, prompt injection, model extraction, AI agent auditing</p>
+                    <div class="skill-level">
+                        <div class="bar green"></div>
+                    </div>
+                </div>
+                <div class="featured-skill reveal" style="--level: 98%">
+                    <div class="icon-wrap blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                    </div>
+                    <h3>Web Security</h3>
+                    <p>Full-stack web app pentesting — XSS, SQLi, SSRF, RCE, WAF bypass</p>
+                    <div class="skill-level">
+                        <div class="bar blue"></div>
+                    </div>
+                </div>
+                <div class="featured-skill reveal" style="--level: 92%">
+                    <div class="icon-wrap purple">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                            <path d="M12 18h.01"></path>
+                        </svg>
+                    </div>
+                    <h3>Mobile Security</h3>
+                    <p>Android & iOS app assessment, API reversing, runtime manipulation</p>
+                    <div class="skill-level">
+                        <div class="bar purple"></div>
+                    </div>
+                </div>
+                <div class="featured-skill reveal" style="--level: 96%">
+                    <div class="icon-wrap orange">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="16" y="16" width="6" height="6" rx="1"></rect>
+                            <rect x="2" y="16" width="6" height="6" rx="1"></rect>
+                            <rect x="9" y="2" width="6" height="6" rx="1"></rect>
+                            <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
+                            <path d="M12 12V8"></path>
+                        </svg>
+                    </div>
+                    <h3>Network Security</h3>
+                    <p>Internal & external network PT, AD review, cloud infra assessment</p>
+                    <div class="skill-level">
+                        <div class="bar orange"></div>
+                    </div>
+                </div>
             </div>
-            <h3>Let's talk security</h3>
-            <p>Available for consulting, security reviews, and penetration testing engagements.</p>
-            <div class="contact-links">
-                <a href="mailto:abhijeetpathak9826@gmail.com" class="btn btn-primary">Email Me</a>
-                <a href="tel:+919109069565" class="btn btn-outline">Call +91 91090 69565</a>
-                <a href="resume.pdf" class="btn btn-outline" target="_blank">Resume PDF</a>
-            </div>
-            <div class="contact-socials">
-                <a href="http://github.com/neverjunior/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/abhijeet-pathakk/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    LinkedIn
-                </a>
-                <a href="https://x.com/neverjuniorr" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.016zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg>
-                    Twitter
-                </a>
+
+            <div class="skills-grid">
+                <div class="skill-tag reveal"><span class="dot"></span>Web Penetration Testing</div>
+                <div class="skill-tag reveal"><span class="dot"></span>API Penetration Testing</div>
+                <div class="skill-tag reveal"><span class="dot"></span>Mobile Penetration Testing</div>
+                <div class="skill-tag reveal"><span class="dot"></span>Internal Network PT</div>
+                <div class="skill-tag reveal"><span class="dot"></span>External Network PT</div>
+                <div class="skill-tag reveal"><span class="dot"></span>Active Directory Review</div>
+                <div class="skill-tag reveal"><span class="dot"></span>Cloud Security</div>
+                <div class="skill-tag reveal"><span class="dot"></span>GenAI Penetration Testing</div>
+                <div class="skill-tag reveal"><span class="dot"></span>AWS Configuration Review</div>
+                <div class="skill-tag reveal"><span class="dot"></span>Attack Surface Management</div>
+                <div class="skill-tag reveal"><span class="dot"></span>Python Scripting</div>
+                <div class="skill-tag reveal"><span class="dot"></span>Bash Scripting</div>
+                <div class="skill-tag reveal"><span class="dot"></span>OSINT</div>
+                <div class="skill-tag reveal"><span class="dot"></span>Active Directory PT</div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- footer -->
-<footer>
-    <div class="container">
-        <p>© 2026 Abhijeet Pathak — Senior Security Consultant</p>
-    </div>
-</footer>
+    <!-- projects -->
+    <section id="projects">
+        <div class="container">
+            <p class="section-label reveal">Builds</p>
+            <h2 class="section-title reveal">Personal Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="project-meta">
+                        <span class="project-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                </path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg></span>
+                    </div>
+                    <h3><a href="https://github.com/neverjunior/GitSki" target="_blank">GitSki ↗</a></h3>
+                    <p>Open-sourced GitHub Recon automation tool written in Python that bypasses GitHub restrictions for
+                        effective scanning.</p>
+                    <div class="project-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">GitHub API</span>
+                        <span class="tech-tag">Recon</span>
+                        <span class="tech-tag">OSINT</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-meta">
+                        <span class="project-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="16" height="16" x="4" y="4" rx="2"></rect>
+                                <rect width="6" height="6" x="9" y="9" rx="1"></rect>
+                                <path d="M9 1v3"></path>
+                                <path d="M15 1v3"></path>
+                                <path d="M9 20v3"></path>
+                                <path d="M15 20v3"></path>
+                                <path d="M20 9h3"></path>
+                                <path d="M20 15h3"></path>
+                                <path d="M1 9h3"></path>
+                                <path d="M1 15h3"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <h3>Subdomain Prediction Tool</h3>
+                    <p>Fine-tuned an LLM model to create a subdomain prediction engine for reconnaissance.</p>
+                    <div class="project-tags">
+                        <span class="tech-tag">LLM</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Recon</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-meta">
+                        <span class="project-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"></path>
+                                <path d="M16 21h1a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+                    <h3>JavaScript Analysis Tool</h3>
+                    <p>Real-time JS monitoring tool that finds secrets and endpoints leveraging AI and Abstract Syntax
+                        Tree parsing.</p>
+                    <div class="project-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">AST Parsing</span>
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">Burp Suite</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-meta">
+                        <span class="project-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </span>
+                    </div>
+                    <h3>Parshu</h3>
+                    <p>Bash-based automation framework for bug hunting and recon — LFI, XSS, SQLi, SSRF, fuzzing,
+                        waybackurls, GitHub recon, Shodan, and more.</p>
+                    <div class="project-tags">
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">Recon</span>
+                        <span class="tech-tag">Bug Bounty</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-meta">
+                        <span class="project-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <h3>Source Code Analyzer</h3>
+                    <p>Takes valid directories and webpages from waybackurls, fuzzes them, and finds secrets/endpoints
+                        using regex.</p>
+                    <div class="project-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Regex</span>
+                        <span class="tech-tag">Static Analysis</span>
+                        <span class="tech-tag">Wayback</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-meta">
+                        <span class="project-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                <path d="M2 12h20"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <h3>Subdomain Finding Framework</h3>
+                    <p>Recursive subdomain discovery using custom modules and open-source tools via active and passive
+                        methods.</p>
+                    <div class="project-tags">
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">Automation</span>
+                        <span class="tech-tag">Active/Passive</span>
+                        <span class="tech-tag">OSINT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-    // ── cursor ──
-    const glow = document.getElementById('cursorGlow');
-    const dot = document.getElementById('cursorDot');
-    let mx = 0, my = 0;
-    let gx = 0, gy = 0;
+    <!-- achievements -->
+    <section id="achievements">
+        <div class="container">
+            <p class="section-label reveal">Recognition</p>
+            <h2 class="section-title reveal">Achievements & Certifications</h2>
+            <div class="achievement-grid">
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4314" target="_blank">CVE-2022-4314 ↗</a>
+                    </h3>
+                    <p>Personal CVE published in the National Vulnerability Database.</p>
+                </div>
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M20 13c0 5-3.5 7.5-7.66 9.7a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 .76-.97l8-2a1 1 0 0 1 .48 0l8 2A1 1 0 0 1 20 6v7z">
+                            </path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3>50+ Hall of Fame & Bug Bounties</h3>
+                    <p>From Cloudflare, Dell, Twitter, Microsoft, Bitgo, Lacework, and many more.</p>
+                </div>
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"></path>
+                            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                            <path d="M5 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                            <path d="M7 16.5 8 22l-3-1-3 1 1-5.5"></path>
+                        </svg>
+                    </div>
+                    <h3>Practical Ethical Hacking — Heath Adams</h3>
+                    <p>ICSI | CNSS Certified Network Security Specialist, Python for Pentesters (EC-Council),
+                        Ethical Hacking (Zaid Zsecurity), Automate the Boring Stuff with Python (Udemy).</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    document.addEventListener('mousemove', (e) => {
-        mx = e.clientX;
-        my = e.clientY;
-        dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
-    });
+    <!-- contact -->
+    <section id="contact">
+        <div class="container">
+            <p class="section-label reveal centered">Connect</p>
+            <h2 class="section-title reveal" style="text-align:center;">Get in Touch</h2>
+            <div class="contact-block reveal">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                </div>
+                <h3>Let's talk security</h3>
+                <p>Available for consulting, security reviews, and penetration testing engagements.</p>
+                <div class="contact-links">
+                    <a href="mailto:abhijeetpathak9826@gmail.com" class="btn btn-primary">Email Me</a>
+                    <a href="tel:+919109069565" class="btn btn-outline">Call +91 91090 69565</a>
+                    <a href="resume.pdf" class="btn btn-outline" target="_blank">Resume PDF</a>
+                </div>
+                <div class="contact-socials">
+                    <a href="http://github.com/neverjunior/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                            </path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhijeet-pathakk/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://x.com/neverjuniorr" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.016zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                        Twitter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    function cursorRaf() {
-        gx += (mx - gx) * 0.08;
-        gy += (my - gy) * 0.08;
-        glow.style.transform = `translate(${gx}px, ${gy}px) translate(-50%, -50%)`;
-        requestAnimationFrame(cursorRaf);
-    }
-    cursorRaf();
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Abhijeet Pathak — Senior Security Consultant</p>
+        </div>
+    </footer>
 
-    document.querySelectorAll('a, .btn, .skill-tag, .project-card, .achievement-card, .featured-skill, .contact-block')
-        .forEach(el => {
-            el.addEventListener('mouseenter', () => dot.classList.add('hovering'));
-            el.addEventListener('mouseleave', () => dot.classList.remove('hovering'));
+    <script>
+        // ── cursor ──
+        const glow = document.getElementById('cursorGlow');
+        const dot = document.getElementById('cursorDot');
+        let mx = 0, my = 0;
+        let gx = 0, gy = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mx = e.clientX;
+            my = e.clientY;
+            dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
         });
 
-    // ── nav scroll ──
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-        nav.classList.toggle('scrolled', window.scrollY > 40);
-    });
+        function cursorRaf() {
+            gx += (mx - gx) * 0.08;
+            gy += (my - gy) * 0.08;
+            glow.style.transform = `translate(${gx}px, ${gy}px) translate(-50%, -50%)`;
+            requestAnimationFrame(cursorRaf);
+        }
+        cursorRaf();
 
+        document.querySelectorAll('a, .btn, .skill-tag, .project-card, .achievement-card, .featured-skill, .contact-block')
+            .forEach(el => {
+                el.addEventListener('mouseenter', () => dot.classList.add('hovering'));
+                el.addEventListener('mouseleave', () => dot.classList.remove('hovering'));
+            });
 
-
-    // ── mobile nav ──
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-        const isOpen = navLinks.classList.toggle('open');
-        document.body.style.overflow = isOpen ? 'hidden' : 'auto';
-    });
-    navLinks.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-            navLinks.classList.remove('open');
-            document.body.style.overflow = 'auto';
+        // ── nav scroll ──
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 40);
         });
-    });
 
-    // ── reveal on scroll ──
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                const barContainer = entry.target.querySelector('.skill-level');
-                if (barContainer) {
-                    setTimeout(() => barContainer.classList.add('skill-bar-visible'), 200);
+
+
+        // ── mobile nav ──
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+        });
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // ── reveal on scroll ──
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    const barContainer = entry.target.querySelector('.skill-level');
+                    if (barContainer) {
+                        setTimeout(() => barContainer.classList.add('skill-bar-visible'), 200);
+                    }
                 }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // ── count-up animation ──
+        const countObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.target);
+                    const duration = 2000;
+                    const start = performance.now();
+                    function update(now) {
+                        const progress = Math.min((now - start) / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        el.textContent = Math.floor(eased * target);
+                        if (progress < 1) requestAnimationFrame(update);
+                    }
+                    requestAnimationFrame(update);
+                    countObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
+
+        // ── terminal widget ──
+        const terminalOutput = document.getElementById('terminalOutput');
+        const commandInput = document.getElementById('commandInput');
+        const terminalBody = document.getElementById('terminalBody');
+
+        const checkScriptLines = [
+            { text: '[+] Initiating DNS resolution for: abhijeetpathak.com', type: 'info', delay: 400 },
+            { text: '    - A: 185.199.108.153 (GitHub Pages IP)', type: 'success', delay: 200 },
+            { text: '    - MX: mx.google.com', type: 'success', delay: 200 },
+            { text: '[+] Scanning active network ports...', type: 'info', delay: 400 },
+            { text: '    - Port 80/tcp (HTTP)   --> OPEN', type: 'success', delay: 250 },
+            { text: '    - Port 443/tcp (HTTPS) --> OPEN', type: 'success', delay: 250 },
+            { text: '[+] Auditing HTTP headers configuration...', type: 'info', delay: 350 },
+            { text: '    - Strict-Transport-Security: Configured', type: 'success', delay: 150 },
+            { text: '    - Content-Security-Policy: Configured', type: 'success', delay: 150 },
+            { text: '[+] Checking CVE references database...', type: 'info', delay: 400 },
+            { text: '    - Found: CVE-2022-4314 (Published by Abhijeet)', type: 'warning', delay: 300 },
+            { text: '[+] Integrity Status: Secure & Verified.', type: 'success', delay: 350 },
+            { text: 'Type "help" to list available terminal commands.', type: 'info', delay: 500 }
+        ];
+
+        let lineIndex = 0;
+
+        function runSimulation() {
+            if (lineIndex < checkScriptLines.length) {
+                const line = checkScriptLines[lineIndex];
+                setTimeout(() => {
+                    const div = document.createElement('div');
+                    div.className = 'terminal-line';
+                    if (line.type === 'success') div.classList.add('terminal-success');
+                    if (line.type === 'info') div.classList.add('terminal-info');
+                    if (line.type === 'warning') div.classList.add('terminal-warning');
+                    if (line.type === 'error') div.classList.add('terminal-error');
+                    div.innerHTML = line.text;
+                    terminalOutput.appendChild(div);
+                    terminalBody.scrollTop = terminalBody.scrollHeight;
+                    lineIndex++;
+                    runSimulation();
+                }, line.delay);
+            }
+        }
+
+        // Run simulation shortly after page load
+        setTimeout(runSimulation, 1000);
+
+        // Interactive Terminal commands
+        let currentInput = "";
+
+        // Create a hidden input element to handle mobile keyboards and normal typing
+        const hiddenInput = document.createElement('input');
+        hiddenInput.type = 'text';
+        hiddenInput.style.position = 'absolute';
+        hiddenInput.style.opacity = '0';
+        hiddenInput.style.pointerEvents = 'none';
+        document.body.appendChild(hiddenInput);
+
+        terminalBody.addEventListener('click', () => {
+            hiddenInput.focus();
+        });
+
+        hiddenInput.addEventListener('input', (e) => {
+            currentInput = e.target.value;
+            commandInput.textContent = currentInput;
+        });
+
+        hiddenInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const cmd = currentInput.trim().toLowerCase();
+                executeCommand(cmd);
+                currentInput = "";
+                hiddenInput.value = "";
+                commandInput.textContent = "";
             }
         });
-    }, { threshold: 0.12 });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        function executeCommand(cmd) {
+            const userLine = document.createElement('div');
+            userLine.className = 'terminal-line';
+            userLine.innerHTML = `<span class="terminal-user">abhijeet@localhost</span>:<span class="terminal-dir">~</span>$ ${cmd}`;
+            terminalOutput.appendChild(userLine);
 
-    // ── count-up animation ──
-    const countObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el = entry.target;
-                const target = parseInt(el.dataset.target);
-                const duration = 2000;
-                const start = performance.now();
-                function update(now) {
-                    const progress = Math.min((now - start) / duration, 1);
-                    const eased = 1 - Math.pow(1 - progress, 3);
-                    el.textContent = Math.floor(eased * target);
-                    if (progress < 1) requestAnimationFrame(update);
-                }
-                requestAnimationFrame(update);
-                countObserver.unobserve(el);
-            }
-        });
-    }, { threshold: 0.5 });
+            const responseLine = document.createElement('div');
+            responseLine.className = 'terminal-line';
 
-    document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
-
-    // ── terminal widget ──
-    const terminalOutput = document.getElementById('terminalOutput');
-    const commandInput = document.getElementById('commandInput');
-    const terminalBody = document.getElementById('terminalBody');
-
-    const checkScriptLines = [
-        { text: '[+] Initiating DNS resolution for: abhijeetpathak.com', type: 'info', delay: 400 },
-        { text: '    - A: 185.199.108.153 (GitHub Pages IP)', type: 'success', delay: 200 },
-        { text: '    - MX: mx.google.com', type: 'success', delay: 200 },
-        { text: '[+] Scanning active network ports...', type: 'info', delay: 400 },
-        { text: '    - Port 80/tcp (HTTP)   --> OPEN', type: 'success', delay: 250 },
-        { text: '    - Port 443/tcp (HTTPS) --> OPEN', type: 'success', delay: 250 },
-        { text: '[+] Auditing HTTP headers configuration...', type: 'info', delay: 350 },
-        { text: '    - Strict-Transport-Security: Configured', type: 'success', delay: 150 },
-        { text: '    - Content-Security-Policy: Configured', type: 'success', delay: 150 },
-        { text: '[+] Checking CVE references database...', type: 'info', delay: 400 },
-        { text: '    - Found: CVE-2022-4314 (Published by Abhijeet)', type: 'warning', delay: 300 },
-        { text: '[+] Integrity Status: Secure & Verified.', type: 'success', delay: 350 },
-        { text: 'Type "help" to list available terminal commands.', type: 'info', delay: 500 }
-    ];
-
-    let lineIndex = 0;
-
-    function runSimulation() {
-        if (lineIndex < checkScriptLines.length) {
-            const line = checkScriptLines[lineIndex];
-            setTimeout(() => {
-                const div = document.createElement('div');
-                div.className = 'terminal-line';
-                if (line.type === 'success') div.classList.add('terminal-success');
-                if (line.type === 'info') div.classList.add('terminal-info');
-                if (line.type === 'warning') div.classList.add('terminal-warning');
-                if (line.type === 'error') div.classList.add('terminal-error');
-                div.innerHTML = line.text;
-                terminalOutput.appendChild(div);
-                terminalBody.scrollTop = terminalBody.scrollHeight;
-                lineIndex++;
-                runSimulation();
-            }, line.delay);
-        }
-    }
-
-    // Run simulation shortly after page load
-    setTimeout(runSimulation, 1000);
-
-    // Interactive Terminal commands
-    let currentInput = "";
-    
-    // Create a hidden input element to handle mobile keyboards and normal typing
-    const hiddenInput = document.createElement('input');
-    hiddenInput.type = 'text';
-    hiddenInput.style.position = 'absolute';
-    hiddenInput.style.opacity = '0';
-    hiddenInput.style.pointerEvents = 'none';
-    document.body.appendChild(hiddenInput);
-
-    terminalBody.addEventListener('click', () => {
-        hiddenInput.focus();
-    });
-
-    hiddenInput.addEventListener('input', (e) => {
-        currentInput = e.target.value;
-        commandInput.textContent = currentInput;
-    });
-
-    hiddenInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            const cmd = currentInput.trim().toLowerCase();
-            executeCommand(cmd);
-            currentInput = "";
-            hiddenInput.value = "";
-            commandInput.textContent = "";
-        }
-    });
-
-    function executeCommand(cmd) {
-        const userLine = document.createElement('div');
-        userLine.className = 'terminal-line';
-        userLine.innerHTML = `<span class="terminal-user">guest@abhijeet</span>:<span class="terminal-dir">~</span>$ ${cmd}`;
-        terminalOutput.appendChild(userLine);
-
-        const responseLine = document.createElement('div');
-        responseLine.className = 'terminal-line';
-
-        switch (cmd) {
-            case 'help':
-                responseLine.innerHTML = `Available commands:<br>
+            switch (cmd) {
+                case 'help':
+                    responseLine.innerHTML = `Available commands:<br>
                 - <span class="terminal-info">skills</span>: List primary domains of expertise<br>
                 - <span class="terminal-info">cve</span>: Show published vulnerability details<br>
                 - <span class="terminal-info">contact</span>: Display direct communication channels<br>
                 - <span class="terminal-info">clear</span>: Clear terminal window<br>
                 - <span class="terminal-info">secret</span>: Read private log entry`;
-                break;
-            case 'skills':
-                responseLine.innerHTML = `Primary Specialties:<br>
+                    break;
+                case 'skills':
+                    responseLine.innerHTML = `Primary Specialties:<br>
                 [+] GenAI & LLM Auditing<br>
                 [+] Web/API/Mobile Penetration Testing<br>
                 [+] Active Directory & Cloud Security Assessment<br>
                 [+] Automated Tool Development (Go/Python/Bash)`;
-                break;
-            case 'cve':
-                responseLine.innerHTML = `<span class="terminal-warning">CVE-2022-4314</span>: Remote Code Execution/File Write vulnerability in national vulnerability database. Impact: HIGH.`;
-                break;
-            case 'contact':
-                responseLine.innerHTML = `Email: <a href="mailto:abhijeetpathak9826@gmail.com" style="color:var(--accent); text-decoration:none;">abhijeetpathak9826@gmail.com</a><br>
+                    break;
+                case 'cve':
+                    responseLine.innerHTML = `<span class="terminal-warning">CVE-2022-4314</span>: Remote Code Execution/File Write vulnerability in national vulnerability database. Impact: HIGH.`;
+                    break;
+                case 'contact':
+                    responseLine.innerHTML = `Email: <a href="mailto:abhijeetpathak9826@gmail.com" style="color:var(--accent); text-decoration:none;">abhijeetpathak9826@gmail.com</a><br>
                 Phone: <a href="tel:+919109069565" style="color:var(--accent); text-decoration:none;">+91 91090 69565</a>`;
-                break;
-            case 'clear':
-                terminalOutput.innerHTML = "";
-                responseLine.innerHTML = "Terminal cleared. Type 'help' for options.";
-                break;
-            case 'secret':
-                responseLine.innerHTML = `<span class="terminal-success">[SUCCESS] FLAG{1337_0ff3ns1v3_s3cur1ty_pr0} unlocked! Abhijeet is open for next-gen security challenges.</span>`;
-                break;
-            case '':
-                return;
-            default:
-                responseLine.innerHTML = `<span class="terminal-error">Command not found: ${cmd}. Type 'help' for options.</span>`;
+                    break;
+                case 'clear':
+                    terminalOutput.innerHTML = "";
+                    responseLine.innerHTML = "Terminal cleared. Type 'help' for options.";
+                    break;
+                case 'secret':
+                    responseLine.innerHTML = `<span class="terminal-success">[SUCCESS] FLAG{1337_0ff3ns1v3_s3cur1ty_pr0} unlocked! Abhijeet is open for next-gen security challenges.</span>`;
+                    break;
+                case '':
+                    return;
+                default:
+                    responseLine.innerHTML = `<span class="terminal-error">Command not found: ${cmd}. Type 'help' for options.</span>`;
+            }
+
+            terminalOutput.appendChild(responseLine);
+            terminalBody.scrollTop = terminalBody.scrollHeight;
         }
 
-        terminalOutput.appendChild(responseLine);
-        terminalBody.scrollTop = terminalBody.scrollHeight;
-    }
-
-    // ── card mouse spotlight effect ──
-    document.querySelectorAll('.project-card, .achievement-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
+        // ── card mouse spotlight effect ──
+        document.querySelectorAll('.project-card, .achievement-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
+
 </html>
