@@ -637,7 +637,7 @@
         /* ── featured skills ── */
         .featured-skills {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 16px;
             margin-bottom: 56px;
         }
@@ -712,6 +712,10 @@
             background: rgba(249, 115, 22, 0.12);
         }
 
+        .featured-skill .icon-wrap.red {
+            background: rgba(255, 95, 86, 0.12);
+        }
+
         .featured-skill h3 {
             font-size: 1rem;
             font-weight: 700;
@@ -763,6 +767,10 @@
 
         .featured-skill .skill-level .bar.orange {
             background: linear-gradient(90deg, var(--orange), #fbbf24);
+        }
+
+        .featured-skill .skill-level .bar.red {
+            background: linear-gradient(90deg, var(--red), #f43f5e);
         }
 
         /* ── skills grid ── */
@@ -1664,6 +1672,21 @@
                         <div class="bar orange"></div>
                     </div>
                 </div>
+                <div class="featured-skill reveal" style="--level: 94%">
+                    <div class="icon-wrap red">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M12 8v8"></path>
+                            <path d="M9 11l3-3 3 3"></path>
+                        </svg>
+                    </div>
+                    <h3>DevSecOps & AppSec</h3>
+                    <p>Threat modeling, SAST/DAST/SCA gating, secrets scanning, container & K8s security</p>
+                    <div class="skill-level">
+                        <div class="bar red"></div>
+                    </div>
+                </div>
             </div>
 
             <div class="skills-grid">
@@ -2192,6 +2215,7 @@
                     responseLine.innerHTML = `Primary Specialties:<br>
                 [+] GenAI & LLM Auditing<br>
                 [+] Web/API/Mobile Penetration Testing<br>
+                [+] DevSecOps & AppSec (CI/CD, K8s, Code Review)<br>
                 [+] Active Directory & Cloud Security Assessment<br>
                 [+] Automated Tool Development (Go/Python/Bash)`;
                     break;
